@@ -69,11 +69,25 @@ dependencies {
 
     val navVersion = "2.7.6"
     implementation("androidx.navigation:navigation-compose:$navVersion")
+    implementation ("androidx.navigation:navigation-compose:2.4.0-alpha10")
 
-    val ktorVersion = "2.3.8"
-    implementation("io.ktor:ktor-client-core:$ktorVersion")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
 
     implementation("io.coil-kt:coil-compose:2.5.0")
-    implementation("com.google.code.gson:gson:2.8.5")
+    //implementation("com.google.code.gson:gson:2.10")
+
+    val ktor_version = "2.3.8"
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-android:$ktor_version")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-serialization-gson:$ktor_version")
+
+    //retrofit library dependencies
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
+
+    //implementation("com.google.code.gson:gson:2.8.5")
 
 }
