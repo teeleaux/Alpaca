@@ -32,7 +32,7 @@ class AggregatedVotesDataSource(
         Log.i("district3Votes", "$district3Votes")
         val parties: List<PartyVotes> = district3Votes.parties
 
-        var votes = parties.map { partyVotes ->
+        val votes = parties.map { partyVotes ->
             DistrictVotes(
                 district = District.DISTRICT_3,
                 alpacaPartyId = partyVotes.partyId,

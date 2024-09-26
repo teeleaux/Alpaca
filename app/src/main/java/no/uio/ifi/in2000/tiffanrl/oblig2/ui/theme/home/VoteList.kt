@@ -28,7 +28,7 @@ fun VoteList(votes: List<DistrictVotes>) {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.Bottom)
             {
-                Text(vote.alpacaPartyId, style = typography.bodyLarge, color = Color.Black)
+                Text(vote.alpacaPartyId , style = typography.bodyLarge, color = Color.Black)
                 Text(vote.numberOfVotesForParty.toString(), style = typography.bodyLarge)
             }
         }

@@ -34,6 +34,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -162,7 +163,7 @@ fun AlpacaPartyHomeScreen(homeViewModel: HomeViewModel = viewModel(), navControl
             Log.i("District Votes size:", "${districtVotes.size}")
 
             val districtNames = listOf("District 1", "District 2", "District 3")
-            var selectedDistrictIndex by remember { mutableIntStateOf(0) }
+            var selectedDistrictIndex by rememberSaveable { mutableIntStateOf(0) }
             var isDropdownExpanded by remember { mutableStateOf(false) }
 
 
@@ -186,7 +187,6 @@ fun AlpacaPartyHomeScreen(homeViewModel: HomeViewModel = viewModel(), navControl
                     districtNames.forEachIndexed { index, districtName ->
                         DropdownMenuItem( text = { Text(districtName) },
                             onClick = { selectedDistrictIndex = index },
-                            //colors = MenuItemColors
                         )
                     }
                 }
